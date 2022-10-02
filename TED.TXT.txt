@@ -1,0 +1,67 @@
+#-1 media de notas 
+nota1 = float(input('Primeira nota: '))
+nota2 = float(input('Segunda nota: '))
+nota3 = float(input('terceira nota:'))
+
+media = (nota1 + nota2 + nota3) / 3
+
+print('Media: ',media)
+    
+if media<7.0:
+     print('Reprovado')
+elif media<10:
+     print('Aprovado')
+else:
+     print('Aprovado com Distinção!')
+
+#2- valor de 0-10
+nota=float(input("informe um numero de 0 a 10: "))
+while (nota>=11) or (nota<0):
+	nota=float(input("informe um numero de 0 a 10: "))
+
+# 3-transformação de temperatura
+c = float(input('informe a temperatura em celcius: '))
+f = ((9 * c) / 5) + 32
+print("A temperatura de {} celcius corresponde a {} fahrenheit ".format(c, f))
+
+# 4- ano bissexto
+ano = int(input('Digite o ano que voce quer verificar: '))
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 ==0:
+    print('O ano {} é bissexto'.format(ano))
+else:
+    print('O ano {} não é bissexto'.format(ano))
+
+# 5- numeros primos
+primo = int(input('digite os valors:'))
+primos = []
+for x in range(primo):
+    cont = 0
+    
+    for y in range(1, x+1):
+        if x%y==0:
+            cont+=1
+    if cont <=2:
+        primos.append(x)
+print("os numeros primos entre 1 e {} são:{}".format(primo, primos))
+
+# 6- alturas
+idades = []
+alturas = []
+for i in range(1, 6):
+    print('%dº Pessoa' %i)
+    idade = int(input('Digite a idade: '))
+    altura = float(input('Digite a altura: '))
+    idades.append(idade)
+    alturas.append(altura)
+
+print('Ordem inversa')
+print('Alturas')
+print(alturas[::-1])
+print('Idades')
+print(idades[::-1])
+
+# 7- numero reverso
+numero = int(input('digite o numero para ser recertido:'))
+numero = str(numero)
+print('O numero inverso é {}'.format(numero[::-1]))
+     
